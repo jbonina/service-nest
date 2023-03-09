@@ -1,14 +1,4 @@
-/*export class CreateErrorLogDTO {
-    readonly id: number;
-    readonly title: string;
-    readonly description: string;
-    readonly author: string;
-}*/
-
-
 import { AutoMap } from "@automapper/classes";
-import { IsDate } from "class-validator";
-
 
 export class CreateErrorLogDTO {
     @AutoMap()

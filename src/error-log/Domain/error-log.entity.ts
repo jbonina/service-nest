@@ -18,6 +18,8 @@ export class ErrorLog {
     @IsOptional()
     errorStackTrace: string;
 
+    // IPAddress, Port and ApplicationName should be enough for identifying an instance
+
     @AutoMap()
     @Column({ length: 32 })
     IPAddress: string;
