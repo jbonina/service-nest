@@ -1,0 +1,55 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Error Logs</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="ApplicationErrorLevel">
+          <th mat-header-cell *matHeaderCellDef>Error Level </th>
+          <td mat-cell *matCellDef="let element"> {{element.ApplicationErrorLevel}} </td>
+        </ng-container>
+        <ng-container matColumnDef="errorMsg">
+          <th mat-header-cell *matHeaderCellDef>Message </th>
+          <td mat-cell *matCellDef="let element"> {{element.errorMsg}} </td>
+        </ng-container>
+        <ng-container matColumnDef="errorStackTrace">
+          <th mat-header-cell *matHeaderCellDef>Stack </th>
+          <td mat-cell *matCellDef="let element"> {{element.errorStackTrace}} </td>
+        </ng-container>
+        <ng-container matColumnDef="IPAddress">
+          <th mat-header-cell *matHeaderCellDef> IP addr </th>
+          <td mat-cell *matCellDef="let element"> {{element.IPAddress}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Port">
+          <th mat-header-cell *matHeaderCellDef> Port </th>
+          <td mat-cell *matCellDef="let element"> {{element.Port}} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="ApplicationName">
+          <th mat-header-cell *matHeaderCellDef> Application </th>
+          <td mat-cell *matCellDef="let element"> {{element.ApplicationName}} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="ApplicationVersion">
+          <th mat-header-cell *matHeaderCellDef> Version </th>
+          <td mat-cell *matCellDef="let element"> {{element.ApplicationVersion}} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let element"> 
+  
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  
+    </mat-card-content>
+  </mat-card>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20, 100]"></mat-paginator>
