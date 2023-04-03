@@ -1,6 +1,6 @@
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[ErrorLogService](https://github.com/jbonina/service-nest) microservices.
 
 ## Installation
 
